@@ -197,10 +197,7 @@
 }
 
 .container__img{
-    padding: 4px 28px 0px 30px;<a class="link active">
-    <span class="material-icons" style="color: gray;">search</span>
-    All
-</a>
+    padding: 4px 28px 0px 30px;
 }
 
 .search__container{

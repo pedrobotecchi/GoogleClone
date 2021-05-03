@@ -36,7 +36,7 @@
     align-items: center;
 }
 
-.menu_link_section {
+.menu__link {
     color: rgba(0,0,0, 0.87);
     margin-right: 12px;
     font-size: 14px;
@@ -48,18 +48,18 @@
     text-decoration: underline;
 }
 
-.menu_icon{
+.menu__icon{
     padding: 12px 12px;
 }
 
-.menu_profile--avatar {
-    padding: 12px;
+.menu__avatar {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    border: 2px solid rgba(0,0,0, 0.2);
+    width: 40px;
+    height: 40px;
 }
 
-.rightMenuSection {
+.menu__section__right {
     align-items: center;
     display: flex;    
 }
@@ -74,11 +74,13 @@
     padding: 56px 8px 0px;
 }
 
-.content__image {
+.content__logo {
     margin-bottom: 8px;
+    width: 290px;
+    height: 90px;
 }
 
-.input__container{
+.content__input{
     display: flex;
     margin-top: 40px;
     align-items: center;
@@ -94,13 +96,36 @@
     padding: 1px 12px 1px 12px;
 }
 
-.content__input {
+.content__input__search {
     max-width: 561px;
     width: 100%;
     height: 40px;
     outline: 0px;
     border: 0px;
     margin-left: 12px;
+}
+
+.content__button__container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.content__button{
+    align-items: center;
+    background-color: #F1F3F4;
+    text-decoration: none;
+    color: initial;
+    height: 30px;
+    margin: 0px 0px 0px 12px;
+    padding: 5px 12px 4px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.content__button:hover{
+    border: 1px solid rgba(26,13,171, 0.3);
 }
 
 .links__container{
@@ -315,24 +340,47 @@
 }
 
 /* Footer */
-
 .footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+.footer__address{
     display: flex;
     align-items: flex-end;
-    padding: 12px 0px 8px 13%;
-    max-width: 100%;
+    padding: 12px 0px 8px 16px;
     background-color: rgba(26,13,171, 0.05);
-}.address{
     border-bottom: 1px solid rgba(0,0,0, 0.2);
-}.contry{
+}
+.footer__text{
     color: rgb(141, 141, 141);
     font-size: 12px;
     margin-left: 6px;
     background-color: unset;
     text-decoration: none;
-}.footer__division{
+}
+.footer__text:hover{
+    text-decoration: underline;
+}
+.footer__division{
     margin-left: 12px;
     height: 25px;
     margin-right: 12px;
     border-left: 1px solid rgba(95,99,104, 0.4);
+}
+.footer__link{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: rgba(26,13,171, 0.05);
+    padding: 12px 16px 8px 16px;
+    height: 40px;
+}
+.footer__link__left{
+    background-color: unset;
+}
+.footer__link__right{
+    background-color: unset;
+    align-content: center;
+    align-items: center;
 }

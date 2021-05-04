@@ -10,13 +10,13 @@
         <title>Google</title>
     </head>
     <body>
-        <header class="menuSearch">
-            <div class="leftMenuSection">
-                <div class="container__img">
-                    <img class="content__img" src="./assets/google-2015.svg" alt="Google" width="92px" height="30px" />
+        <header class="menu__search">
+            <section class="menu__section__left">
+                <div class="menu__logo">
+                    <img class="menu__img" src="./assets/google-2015.svg" alt="Google logo"/>
                 </div>
-                <div class="search__container">
-                    <input class="content__input" style="margin-left: 30px; width: 533px;" type="text" placeholder="Search Google or type a URL" id="userSearch"/>
+                <div class="menu__bar">
+                    <input class="content__input" style="margin-left: 30px; width: 533px; border: unset;" type="text" placeholder="Search Google or type a URL" id="userSearch"/>
                     <button style="margin-right: 12px;">
                         <img src="./assets/xIcon.svg" height="24px" width="24px">
                     </button>
@@ -28,22 +28,18 @@
                         <span class="material-icons" style="color: gray; ">search</span>
                     </button>
                 </div>
-            </div>
-            <div class="rightMenuSection">
-                <img class="menu_icon" src="assets/more-icon.svg" alt="More" />
-                <div class="menu_profile">
-                    <img class="menu_profile--avatar" src="./assets/Pedro.svg" alt="Avatar" height="32" width="32" />
+            </section>
+            <secion class="menu__section__right">
+                <img class="menu__icon" src="assets/more-icon.svg" alt="More options" />
+                <div class="menu__profile">
+                    <img class="menu__avatar" src="./assets/Pedro.svg" alt="Avatar"/>
                 </div>
-            </div>
+            </secion>
         </header>
-        <nav class="menu__links">
-            <a class="link active" style="margin-left: 13%;">
+        <nav class="menu__search__link">
+            <a class="link__active" style="margin-left: 13%;">
                 <span class="material-icons" style="color: gray;">search</span>
                 All
-            </a>
-            <a class="link">
-                <span class="material-icons" style="color: gray;">photo</span>
-                Images
             </a>
             <a class="link">
                 <span class="material-icons" style="color: gray;">location_on</span>
@@ -54,147 +50,220 @@
                 News
             </a>
             <a class="link">
-                <span class="material-icons" style="color: gray;">ondemand_video</span>
-                Videos
+                <span class="material-icons" style="color: gray;">photo</span>
+                Images
             </a>
-            <a class="link" style="margin-left: 32px;">
+            <a class="link">
+                <span class="material-icons" style="color: gray;">sell</span>
+                Shopping
+            </a>
+            <a class="link" style="margin-left: 32px; margin-right: 12px;">
                 <span class="material-icons" style="color: gray;">more_vert</span>
                 More
             </a>
+            <a class="link">Settings</a>
+            <a class="link">Tools</a>
         </nav>
         <main>
             <div class="result__collumn">
-                <div class="result__content">
-                    <div class="results">
+                <section class="result__content">
+                    <div class="result__search">
                         <span>About 63,100 results (0.91 seconds) </span>
                     </div>
-                    <div class="site">
-                        <div class="url">
-                            <a target="_blank" >https://www.daitan.com</a>
+                    <div class="result__site">
+                        <div class="result__url">
+                            <a class="result__url" target="_blank" href="https://www.daitan.com">https://www.daitan.com</a>
                         </div>
-                        <div class="homeURL">
-                            <a class="homeURL" target="_blank">DAITAN: Home</a>
+                        <div class="result__homeURL">
+                            <a class="result__homeURL" target="_blank" href="https://www.daitan.com">DAITAN: Home</a>
                         </div>
-                        <div class="description">
+                        <div class="result__description">
                             Accelerating Engineering Results & Business Outcomes. Daitan provides engineering expertise in a wide range of technologies, frameworks and tools. Our software development approach applies data-driven techniques such as, Artificial Intelligence, Machine Learning, Data Engineering, BI and Analytics.
                         </div>
                     </div>
-                    <div class="site">
-                        <div class="url">
-                            <a target="_blank">https://www.daitan.com</a>
+                    <div class="result__site">
+                        <div class="result__url">
+                            <a class="result__url" target="_blank" href="https://www.daitan.com">https://www.daitan.com</a>
                         </div>
-                        <div class="homeURL">
-                            <a class="homeURL" target="_blank">DAITAN: Home</a>
+                        <div class="result__homeURL">
+                            <a class="result__homeURL" target="_blank" href="https://www.daitan.com">DAITAN: Home</a>
                         </div>
-                        <div class="description">
+                        <div class="result__description">
                             Accelerating Engineering Results & Business Outcomes. Daitan provides engineering expertise in a wide range of technologies, frameworks and tools. Our software development approach applies data-driven techniques such as, Artificial Intelligence, Machine Learning, Data Engineering, BI and Analytics.
                         </div>
                     </div>
-                    <div class="site"><div class="site">
-                        <div class="url">
-                            <a target="_blank">https://www.daitan.com</a>
+                    <div class="result__site">
+                        <div class="result__url">
+                            <a class="result__url" target="_blank" href="https://www.daitan.com">https://www.daitan.com</a>
                         </div>
-                        <div class="homeURL">
-                            <a class="homeURL" target="_blank">DAITAN: Home</a>
+                        <div class="result__homeURL">
+                            <a class="result__homeURL" target="_blank" href="https://www.daitan.com">DAITAN: Home</a>
                         </div>
-                        <div class="description">
+                        <div class="result__description">
                             Accelerating Engineering Results & Business Outcomes. Daitan provides engineering expertise in a wide range of technologies, frameworks and tools. Our software development approach applies data-driven techniques such as, Artificial Intelligence, Machine Learning, Data Engineering, BI and Analytics.
                         </div>
                     </div>
-                    <div class="site">
-                        <div class="url">
-                            <a target="_blank">https://www.daitan.com</a>
+                    <div class="result__site">
+                        <div class="result__url">
+                            <a class="result__url" target="_blank" href="https://www.daitan.com">https://www.daitan.com</a>
                         </div>
-                        <div class="homeURL">
-                            <a class="homeURL" target="_blank">DAITAN: Home</a>
+                        <div class="result__homeURL">
+                            <a class="result__homeURL" target="_blank" href="https://www.daitan.com">DAITAN: Home</a>
                         </div>
-                        <div class="description">
+                        <div class="result__description">
                             Accelerating Engineering Results & Business Outcomes. Daitan provides engineering expertise in a wide range of technologies, frameworks and tools. Our software development approach applies data-driven techniques such as, Artificial Intelligence, Machine Learning, Data Engineering, BI and Analytics.
                         </div>
                     </div>
-                    <div class="site">
-                        <div class="url">
-                        <div class="url">
-                            <a target="_blank">https://www.daitan.com</a>
+                    <div class="result__site">
+                        <div class="result__url">
+                            <a class="result__url" target="_blank" href="https://www.daitan.com">https://www.daitan.com</a>
                         </div>
-                        <div class="homeURL">
-                            <a class="homeURL" target="_blank">DAITAN: Home</a>
+                        <div class="result__homeURL">
+                            <a class="result__homeURL" target="_blank" href="https://www.daitan.com">DAITAN: Home</a>
                         </div>
-                        <div class="description">
+                        <div class="result__description">
                             Accelerating Engineering Results & Business Outcomes. Daitan provides engineering expertise in a wide range of technologies, frameworks and tools. Our software development approach applies data-driven techniques such as, Artificial Intelligence, Machine Learning, Data Engineering, BI and Analytics.
                         </div>
                     </div>
-                    <div class="related__search fields">
-                        <div class="boxline">
-                            <div class="box">
+                    <div class="related__search">
+                        <div class="related__boxline">
+                            <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="boxText">daitan group funding</span>
+                                <span class="related__text">daitan group funding</span>
                             </div>
-                            <div class="box">
+                            <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="boxText">daitan careers</span>
-                            </div>
-                        </div>
-                        <div class="boxline">
-                            <div class="box">
-                                <span class="material-icons" style="color: gray;">search</span>
-                                <span class="boxText">daitan glassdoor</span>
-                            </div>
-                            <div class="box">
-                                <span class="material-icons" style="color: gray;">search</span>
-                                <span class="boxText">daitan group zoominfo</span>
+                                <span class="related__text">daitan careers</span>
                             </div>
                         </div>
-                        <div class="boxline">
-                            <div class="box" >
+                        <div class="related__boxline">
+                            <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="boxText">daitan honda</span>
+                                <span class="related__text">daitan glassdoor</span>
+                            </div>
+                            <div class="related__box">
+                                <span class="material-icons" style="color: gray;">search</span>
+                                <span class="related__text">daitan group zoominfo</span>
+                            </div>
+                        </div>
+                        <div class="related__boxline" style="align-self: flex-start;">
+                            <div class="related__box">
+                                <span class="material-icons" style="color: gray;">search</span>
+                                <span class="related__text">daitan honda</span>
                             </div>
                         </div>
                     </div>
                     <div>
-                        
+                        OI
                     </div>
-                </div>
-                <div class="infoBox">
-                    <div class="imgBlocks">
+                </section>
+                <section class="search__info">
+                    <div class="search__info__image">
                         <img src="./assets/photo.png" style="height: 100px; width: 275px;"></img>
                         <img src="./assets/photo.png" style="height: 100px; width: 275px;"></img>
                     </div>
-                    <div class="infosNames">
-                        <span style="font-size: 18px;">Daitan</span>
-                        <img src="./assets/photo.png" style="border-radius: 50%;"/>
+                    <div class="search__name__box">
+                        <span style="font-size: 25px;">Daitan</span>
+                        <img class="menu__avatar" src="./assets/photo.png" alt="Search Avatar"/>
                     </div>
-                    <div class="infosButton">
-
+                    <div class="search__info__button">
+                        <a class="search__button" href="https://www.daitan.com/">Website</a>
+                        <a class="search__button" href="https://www.google.com/maps/dir//daitan/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x94c8c59e9b10696b:0xe0e3cfe111794f47?sa=X&ved=2ahUKEwjDzZSp4q3wAhXSBtQKHTI7CGIQ9RcwE3oECB4QBQ">Routes</a>
+                        <a class="search__button">Save</a>
+                        <a class="search__button">Call</a>
                     </div>
-                    <div class="infos">
-                        <span class="textBox" style="margin-bottom: 6px;">Located in: </span>Galeria Shopping <br/>
-                        <span class="textBox">Address: </span>Galleria Office Park Ed. 1, Cj. 101, Av. Bailarina Selma Parada, 201 - Jardim Madalena, Campinas - SP, 13091-904<br/>
-                        <span class="textBox">Hours: </span><span class="textBox" style="font-weight: unset; color: gray;">Open</span> ⋅ Closes 5PM<br/>
-                        <span class="textBox">Phone: </span><span style="color: blue;">(19) 3707-9610</span><br/>
-                        <a>Suggest an edit</a><a> · Own this business?</a>
-                        Questions & answers
-                        See all questions (1)
-                    </div>
-                </div>
+                    <section class="rating">
+                        <div class="search__rating">
+                            <span style="font-size: 24px;">4.8</span>
+                            <img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/>
+                            <span style="font-size: 12px;">155 comentários no Google</span>
+                        </div>
+                        <span class="search__label">Empresa de software em Campinas, São Paulo</span>
+                    </section>
+                    <section class="search__info__box">
+                        <span class="search__text">Located in: </span>Galeria Shopping <br/><br/>
+                        <span class="search__text">Address: </span>Galleria Office Park Ed. 1, Cj. 101, Av. Bailarina Selma Parada, 201 - Jardim Madalena, Campinas - SP, 13091-904<br/><br/>
+                        <span class="search__text">Hours: </span><span class="search__text" style="font-weight: unset; color: gray;">Open</span> ⋅ Closes 5PM<br/><br/>
+                        <span class="search__text">Phone: </span><span style="color: blue;">(19) 3707-9610</span><br/><br/>
+                        <div class="search__link">
+                            <a>Suggest a change</a>
+                            <a target="_blank" style="text-decoration: none;" href="https://business.google.com/create?hl=pt-BR&getstarted&fp=16205024449776930631&gmbsrc=br-pt-BR-et-ip-z-gmb-s-z-l~skp%7Cclaimbz_aoc_a%7Cu%7Cexp&ppsrc=GMBSI"> · Own this business?</a>
+                        </div> 
+                    </section>
+                    <section class="search__question">
+                        <div class="search__question__text">
+                            <span class="search__title">Questions & answers</span>
+                            <span class="search__link">View all questions (1)</span>
+                        </div>
+                        <div class="search__button">
+                            <a>Ask a question</a>
+                        </div>   
+                    </section>
+                    <section class="search__webrating">
+                        <span class="search__title">Web Ratings</span>
+                        <div class="search__webrating__text">
+                            <a target="_blank" href="https://pt-br.facebook.com/daitangroupbr" class="search__title" style="margin-right: 12px; color: gray;">5/5</a>
+                            <span class="search__link" style="margin-right: 8px;">Facebook</span>
+                            <span>45 votes</span>
+                        </div>
+                    </section>
+                    <section class="search__comment">
+                        <div class="search__comment__head">
+                            <span class="search__title" style="align-self: flex-end;">Comments</span>
+                            <div class="search__comment_button">
+                                <a class="search__button">Comment</a>
+                                <a class="search__button">Add a photo</a>
+                            </div>
+                        </div>
+                        <div class="search__comment__box">
+                            <div class="search__comment__item">
+                                <img class="menu__avatar" src="./assets/Chribre.png" alt="Avatar"/>
+                                <div class="search__comment_text">
+                                    <span>" Ideal environment for business and to allocate companies for a specific time."</span>
+                                    <div class="star__container">
+                                        <img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/>
+                                    </div>                                </div>
+                            </div>
+                            <div class="search__comment__item">
+                                <img class="menu__avatar" src="./assets/Uthuqueyphuye.png" alt="Avatar"/>
+                                <div class="search__comment_text">
+                                    <span>"Certainly the best technology company to work for in Brazil "</span>
+                                    <div class="star__container">
+                                        <img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search__comment__item">
+                                <img class="menu__avatar" src="./assets/Edorblaerbin.png" alt="Avatar"/>
+                                <div class="search__comment_text">
+                                    <span>"Good company and great location "</span>
+                                    <div class="star__container">
+                                        <img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/><img src="./assets/star.svg"/>
+                                    </div>                                </div>
+                            </div>
+                            <span class="search__link">View all Google reviews</span>
+                        </div>
+                    </section>
+                </section>
             </div>
         </main>
         <footer>
-            <div class="footer address">
-                <span class="contry">Brazil</span>
+            <div class="footer__address" style="padding: 12px 0px 8px 13%;">
+                <span class="footer__text">Brazil</span>
                 <div class="footer__division" ></div>
-                <span class="contry" style="color: black; font-size: 14px;">13483, Limeira - State of São Paulo</span>
-                <span class="contry"> - From your Internet address</span>
-                <span class="contry"> - Use precise location</span>
-                <span class="contry"> - Learn more</span>
+                <span class="footer__text" style="color: black; font-size: 14px;">13483, Limeira - State of São Paulo</span>
+                <span class="footer__text"> - From your Internet address</span>
+                <span class="footer__text"> - Use precise location</span>
+                <span class="footer__text"> - Learn more</span>
             </div>
-            <div class="footer__link">
-                <a class="contry" href="https://support.google.com/websearch/?visit_id=637552983631378540-3352918307&hl=en-BR&rd=2#topic=3378866" target="_blank" >Help</a>
-                <a class="contry" style="margin-left: 12px;" target="_blank">Send Feedback</a>
-                <a class="contry" style="margin-left: 12px;" target="_blank" href="https://policies.google.com/privacy?hl=en-BR&fg=1">Privacy</a>
-                <a class="contry" style="margin-left: 12px;" target="_blank" href="https://policies.google.com/terms?hl=en-BR&fg=1">Terms</a>
-            </div>
+            <div class="footer__link" style="padding: 12px 0px 8px 13%;">
+                <section class="footer__link__left"> 
+                    <a class="footer__text" href="https://support.google.com/websearch/?visit_id=637552983631378540-3352918307&hl=en-BR&rd=2#topic=3378866" target="_blank" >Help</a>
+                    <a class="footer__text" style="margin-left: 12px;" target="_blank">Send Feedback</a>
+                    <a class="footer__text" style="margin-left: 12px;" target="_blank" href="https://policies.google.com/privacy?hl=en-BR&fg=1">Privacy</a>
+                    <a class="footer__text" style="margin-left: 12px;" target="_blank" href="https://policies.google.com/terms?hl=en-BR&fg=1">Terms</a>
+                </section> 
+            </div>          
         </footer>
     </body>
 </html>

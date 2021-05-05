@@ -12,9 +12,14 @@ function setSearch(e) {
 // Function that loads the value of search and set them in the desired positions
 function loadSearch() {
     const search = localStorage.getItem("search");
+    const str = search.replace(/\s/g, '');
+    const capitalized = search[0].toUpperCase() + search.slice(1) + " : Home";
     document.getElementById("userSearch").value = search;
     document.getElementById("searchSpan").innerHTML = search;
-
+    document.getElementById("resultURL").innerHTML = "https://" + str + ".com.br";
+    document.getElementById("resultURL").href = "https://" + str + ".com.br";
+    document.getElementById("resultHomeURL").innerHTML = capitalized
+    document.getElementById("resultHomeURL").href = "https://" + str + ".com.br";
     // get all related boxes to change the innerHTML
     const boxes = Array.prototype.slice.call(document.getElementsByClassName("related__text"));
     boxes.map(boxText => {

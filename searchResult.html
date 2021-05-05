@@ -6,25 +6,30 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="icon" href="./assets/gLogo.svg" type="image/icon type" />
-        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
         <title>Google</title>
     </head>
     <body>
+        <script>
+            window.onload = function() {
+                loadSearch();
+            };
+        </script>
         <header class="menu__search">
             <section class="menu__section__left">
                 <div class="menu__logo">
                     <img class="menu__img" src="./assets/google-2015.svg" alt="Google logo"/>
                 </div>
                 <div class="menu__bar">
-                    <input class="content__input" style="margin-left: 30px; width: 533px; border: unset;" type="text" placeholder="Search Google or type a URL" id="userSearch"/>
-                    <button style="margin-right: 12px;">
+                    <input id="userSearch" class="content__input" onkeypress="setSearch(event)"  style="margin-left: 30px; width: 533px; border: unset;" type="text" placeholder="Search Google or type a URL" />
+                    <button style="margin-right: 12px; cursor: pointer;" onclick="unSetSearch()">
                         <img src="./assets/xIcon.svg" alt="cancel search" height="24px" width="24px">
                     </button>
                     <div class="division"></div>
                     <button style="color:royalblue; margin-right: 12px;">
                         <span class="material-icons">mic</span>
                     </button>
-                    <button style="margin-right: 12px;">
+                    <button style="margin-right: 12px; cursor: pointer;" onclick="setSearch(event)">
                         <span class="material-icons" style="color: gray; ">search</span>
                     </button>
                 </div>
@@ -41,28 +46,28 @@
                 <span class="material-icons" style="color: gray;">search</span>
                 All
             </a>
-            <a class="link" target="_blank" href="https://www.google.com/maps?q=daitan&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjGotyGnLDwAhWmH7kGHYaPC2EQ_AUoAXoECAEQAw">
+            <a class="link" target="_blank" onclick="showAlert()" >
                 <span class="material-icons" style="color: gray;">location_on</span>
                 Maps
             </a>
-            <a class="link" target="_blank" href="https://www.google.com/search?q=daitan&source=lnms&tbm=nws&sa=X&ved=2ahUKEwjGotyGnLDwAhWmH7kGHYaPC2EQ_AUoAnoECAEQBA&biw=1299&bih=669&dpr=1">
+            <a class="link" target="_blank" onclick="showAlert()">
                 <span class="material-icons" style="color: gray;">feed</span>
                 News
             </a>
-            <a class="link" target="_blank" href="https://www.google.com/search?q=daitan&tbm=isch&source=lnms&sa=X&ved=0ahUKEwjCxeuSxbDwAhWUGbkGHRTtClgQ_AUIESgD&biw=1299&bih=669&dpr=1">
+            <a class="link" target="_blank" onclick="showAlert()" >
                 <span class="material-icons" style="color: gray;">photo</span>
                 Images
             </a>
-            <a class="link" target="_blank" href="https://www.google.com/search?q=daitan&tbm=shop&source=lnms&sa=X&ved=0ahUKEwjCxeuSxbDwAhWUGbkGHRTtClgQ_AUIEigE&biw=1299&bih=669&dpr=1">
+            <a class="link" target="_blank" onclick="showAlert()" >
                 <span class="material-icons" style="color: gray;">sell</span>
                 Shopping
             </a>
-            <a class="link" style="margin-left: 32px; margin-right: 12px;">
+            <a class="link" style="margin-left: 32px; margin-right: 12px;" onclick="showAlert()">
                 <span class="material-icons" style="color: gray;">more_vert</span>
                 More
             </a>
-            <a class="link">Settings</a>
-            <a class="link">Tools</a>
+            <a class="link" onclick="showAlert()">Settings</a>
+            <a class="link" onclick="showAlert()">Tools</a>
         </nav>
         <main>
             <div class="result__collumn">
@@ -184,27 +189,27 @@
                         <div class="related__boxline">
                             <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="related__text">daitan group funding</span>
+                                <span id="text1" class="related__text">daitan group funding</span>
                             </div>
                             <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="related__text">daitan careers</span>
+                                <span id="text2" class="related__text">daitan careers</span>
                             </div>
                         </div>
                         <div class="related__boxline">
                             <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="related__text">daitan glassdoor</span>
+                                <span id="text3" class="related__text">daitan glassdoor</span>
                             </div>
                             <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="related__text">daitan group zoominfo</span>
+                                <span id="text4" class="related__text">daitan group zoominfo</span>
                             </div>
                         </div>
                         <div class="related__boxline" style="align-self: flex-start;">
                             <div class="related__box">
                                 <span class="material-icons" style="color: gray;">search</span>
-                                <span class="related__text">daitan honda</span>
+                                <span id="text5" class="related__text">daitan honda</span>
                             </div>
                         </div>
                     </div>
@@ -265,7 +270,7 @@
                         <img src="./assets/photo.png" style="height: 100px; width: 275px;"></img>
                     </div>
                     <div class="search__name__box">
-                        <span style="font-size: 25px;">Daitan</span>
+                        <span id="searchSpan" style="font-size: 25px;">Daitan</span>
                         <img class="menu__avatar" src="./assets/photo.png" alt="Search Avatar"/>
                     </div>
                     <div class="search__info__button">

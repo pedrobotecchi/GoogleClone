@@ -45,3 +45,10 @@ function unSetSearch() {
 function showAlert(){
     alert("JS is commanding HuEhUe");
 }
+
+// Function that will redirect the user when clicked in the related fields
+function redirectSearch(id) {
+    const newSearch = document.getElementById(id).innerHTML;
+    localStorage.setItem("search", newSearch);
+    window.location.href = "http://127.0.0.1:5500/searchResult.html";
+}

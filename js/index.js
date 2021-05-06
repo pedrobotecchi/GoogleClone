@@ -3,15 +3,16 @@ function setSearch(e) {
     search = document.getElementById('userSearch').value;
     if(!e.key || e.key === 'Enter') {
         if(search !== '') {
-            window.location.href = "http://127.0.0.1:5500/searchResult.html";
-            localStorage.setItem("search", search);
+            window.location.href = `http://127.0.0.1:5500/searchResult.html?search=${search}`;
         }
     }
 }
 
 // Function that loads the value of search and set them in the desired positions
 function loadSearch() {
-    const search = localStorage.getItem("search");
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get('search');
+
     const str = search.replace(/\s/g, '');
     const capitalized = search[0].toUpperCase() + search.slice(1) + " : Home";
     document.getElementById("userSearch").value = search;
@@ -49,6 +50,5 @@ function showAlert(){
 // Function that will redirect the user when clicked in the related fields
 function redirectSearch(id) {
     const newSearch = document.getElementById(id).innerHTML;
-    localStorage.setItem("search", newSearch);
-    window.location.href = "http://127.0.0.1:5500/searchResult.html";
+    window.location.href = `http://127.0.0.1:5500/searchResult.html?search=${newSearch}`;
 }

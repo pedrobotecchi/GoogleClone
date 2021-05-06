@@ -52,3 +52,8 @@ function redirectSearch(id) {
     const newSearch = document.getElementById(id).innerHTML;
     window.location.href = `http://127.0.0.1:5500/searchResult.html?search=${newSearch}`;
 }
+
+// Function to open the menu__modal
+function openModal() {
+    document.getElementById("menu__modal").style.display = "block";
+}

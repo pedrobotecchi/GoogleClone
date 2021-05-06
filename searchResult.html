@@ -36,9 +36,14 @@
             </section>
             <secion class="menu__section__right">
                 <img class="menu__icon" src="assets/more-icon.svg" alt="More options" />
-                <div class="menu__profile">
-                    <img class="menu__avatar" src="./assets/Pedro.svg" alt="Avatar"/>
-                </div>
+                <button class="menu__profile" onclick="openModal()">
+                    <img class="menu__avatar" src="./assets/Pedro.svg" alt="Avatar Icon" />
+                    <div id="menu__modal" style="padding-top: 80px;" class="menu__modal">
+                        <div id="modal__box" class="modal__box">
+                            <span>Insert SOMETHING HERE!!</span>
+                        </div>
+                    </div>
+                </button>  
             </secion>
         </header>
         <nav class="menu__search__link">
@@ -372,5 +377,13 @@
                 </section> 
             </div>          
         </footer>
+        <script>
+            var modal = document.getElementById("menu__modal");
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
     </body>
 </html>

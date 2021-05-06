@@ -18,9 +18,14 @@
                 <a class="menu__link" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">Gmail</a>
                 <a class="menu__link" href="https://www.google.com.br/imghp?hl=en&tab=ri&ogbl" target="_blank">Images</a>
                 <img class="menu__icon" src="assets/more-icon.svg" alt="More Options" />
-                <div class="menu__profile">
+                <button class="menu__profile" onclick="openModal()">
                     <img class="menu__avatar" src="./assets/Pedro.svg" alt="Avatar Icon" />
-                </div>    
+                    <div id="menu__modal" class="menu__modal">
+                        <div id="modal__box" class="modal__box">
+                            <span>Insert SOMETHING HERE!!</span>
+                        </div>
+                    </div>
+                </button>    
             </section>
         </nav>
     </header>
@@ -56,5 +61,13 @@
             </section>  
         </div>
     </footer>
+    <script>
+        var modal = document.getElementById("menu__modal");
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

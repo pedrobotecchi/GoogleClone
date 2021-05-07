@@ -8,23 +8,29 @@ function setSearch(e) {
     }
 }
 
+function editElementByID(elementID, innerHTMLValue, hrefValue) {
+    document.getElementById(elementID).innerHTML = innerHTMLValue;
+    document.getElementById(elementID).href = hrefValue || innerHTMLValue;
+}
+
 // Function that loads the value of search and set them in the desired positions
 function loadSearch() {
     const urlParams = new URLSearchParams(window.location.search);
-    const search = urlParams.get('search');
+    const searchString = urlParams.get('search');
 
-    const str = search.replace(/\s/g, '');
-    const capitalized = search[0].toUpperCase() + search.slice(1);
-    document.getElementById("userSearch").value = search;
-    document.getElementById("searchSpan").innerHTML = capitalized;
-    document.getElementById("resultURL").innerHTML = "https://" + str + ".com.br";
-    document.getElementById("resultURL").href = "https://" + str + ".com.br";
-    document.getElementById("resultHomeURL").innerHTML = capitalized + " : Home"
-    document.getElementById("resultHomeURL").href = "https://" + str + ".com.br";
+    const searchStringWithoutSpaces = searchString.replace(/\s/g, '');
+    const capitalizedSearchString = searchString[0].toUpperCase() + searchString.slice(1);
+    const urlWithSearchString = "https://" + searchStringWithoutSpaces + ".com.br";
+    const firstResultString = capitalizedSearchString + " : Home";
+
+    document.getElementById("userSearch").value = searchString;
+    document.getElementById("searchSpan").innerHTML = capitalizedSearchString;
+    editElementByID("resultURL", urlWithSearchString);
+    editElementByID("resultHomeURL", firstResultString, urlWithSearchString);
     // get all related boxes to change the innerHTML
     const boxes = Array.prototype.slice.call(document.getElementsByClassName("related__text"));
     boxes.map(boxText => {
-        const newInnerHTML = getNewText(boxText.innerHTML, search);
+        const newInnerHTML = getNewText(boxText.innerHTML, searchString);
         document.getElementById(boxText.id).innerHTML = newInnerHTML;
     });
 }

@@ -362,6 +362,10 @@
     text-decoration: none;
 }
 
+.paginator__link:hover{
+    cursor: pointer;
+}
+
 .paginator__link.active{
     color: black;
     text-decoration: none;
@@ -374,6 +378,7 @@
 .paginator__letter{
     font-size: 36px;
     color: blue;
+    user-select: none;
 }
 
 .paginator__letter.index{

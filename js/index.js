@@ -14,12 +14,12 @@ function loadSearch() {
     const search = urlParams.get('search');
 
     const str = search.replace(/\s/g, '');
-    const capitalized = search[0].toUpperCase() + search.slice(1) + " : Home";
+    const capitalized = search[0].toUpperCase() + search.slice(1);
     document.getElementById("userSearch").value = search;
-    document.getElementById("searchSpan").innerHTML = search;
+    document.getElementById("searchSpan").innerHTML = capitalized;
     document.getElementById("resultURL").innerHTML = "https://" + str + ".com.br";
     document.getElementById("resultURL").href = "https://" + str + ".com.br";
-    document.getElementById("resultHomeURL").innerHTML = capitalized
+    document.getElementById("resultHomeURL").innerHTML = capitalized + " : Home"
     document.getElementById("resultHomeURL").href = "https://" + str + ".com.br";
     // get all related boxes to change the innerHTML
     const boxes = Array.prototype.slice.call(document.getElementsByClassName("related__text"));

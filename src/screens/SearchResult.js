@@ -5,8 +5,7 @@ import Paginator from '../components/Paginator';
 import RelatedSearch from '../components/RelatedSearch';
 import SearchInfoSection from '../components/SearchInfoSection';
 import SearchScreenFooter from '../components/SearchScreenFooter';
-
-const MAX_RESULTS_PER_PAGE = 10;
+import { MAX_RESULTS_PER_PAGE } from '../lib/utils';
 
 class SearchResult extends Component {
   constructor(props) {

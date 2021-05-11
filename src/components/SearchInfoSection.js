@@ -5,6 +5,7 @@ import Edorblaerbin from '../assets/Edorblaerbin.png';
 import DaitanImage from '../assets/photo.png';
 import Star from '../assets/star.svg';
 import Uthuqueyphuye from '../assets/Uthuqueyphuye.png';
+import { showAlert } from '../lib/utils';
 
 class SearchInfoSection extends Component {
   constructor(props){
@@ -26,10 +27,10 @@ class SearchInfoSection extends Component {
           <img className="menu__avatar" src={DaitanImage} alt="Search Avatar"/>
         </div>
         <div className="search__info__button">
-          <button className="search__button" onclick="showAlert()">Website</button>
-          <button className="search__button" onclick="showAlert()">Routes</button>
-          <button className="search__button" onclick="showAlert()">Save</button>
-          <button className="search__button" onclick="showAlert()">Call</button>
+          <button className="search__button" onClick={showAlert}>Website</button>
+          <button className="search__button" onClick={showAlert}>Routes</button>
+          <button className="search__button" onClick={showAlert}>Save</button>
+          <button className="search__button" onClick={showAlert}>Call</button>
         </div>
         <section className="rating">
           <div className="search__rating">

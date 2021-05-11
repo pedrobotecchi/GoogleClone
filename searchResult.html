@@ -21,7 +21,7 @@
                     <img class="menu__img" src="./assets/google-2015.svg" alt="Google logo"/>
                 </div>
                 <div class="menu__bar">
-                    <input id="userSearch" class="content__input" onkeypress="setSearch(event)"  style="margin-left: 30px; width: 533px; border: unset;" type="text" placeholder="Search Google or type a URL" />
+                    <input id="userSearch" class="content__input" onkeypress="searchInputAction(event)"  style="margin-left: 30px; width: 533px; border: unset;" type="text" placeholder="Search Google or type a URL" />
                     <button style="margin-right: 12px; cursor: pointer;" onclick="unSetSearch()">
                         <img src="./assets/xIcon.svg" alt="cancel search" height="24px" width="24px">
                     </button>
@@ -29,7 +29,7 @@
                     <button style="color:royalblue; margin-right: 12px;" onclick="showAlert()">
                         <span class="material-icons" style="cursor: pointer;">mic</span>
                     </button>
-                    <button style="margin-right: 12px; cursor: pointer;" onclick="setSearch(event)">
+                    <button style="margin-right: 12px; cursor: pointer;" onclick="searchInputAction(event)">
                         <span class="material-icons" style="color: gray; ">search</span>
                     </button>
                 </div>

@@ -32,12 +32,12 @@
     <main class="content">
         <img class="content__logo" src="./assets/google-2015.svg" alt="Google logo"  />
         <div class="content__input">
-            <button onclick="setSearch(event)" id="searchButton"><a class="material-icons">search</a></button>
-            <input class="content__input__search" type="text" placeholder="Search Google or type a URL" id="userSearch" onkeypress="setSearch(event)"/>
+            <button onclick="searchInputAction(event)" id="searchButton"><a class="material-icons">search</a></button>
+            <input class="content__input__search" type="text" placeholder="Search Google or type a URL" id="userSearch" onkeypress="searchInputAction(event)"/>
             <button><span class="material-icons">mic</span></button>
         </div>
         <div class="content__button__container">
-            <button class="content__button" onclick="setSearch(event)">Google Search</button>
+            <button class="content__button" onclick="searchInputAction(event)">Google Search</button>
             <button class="content__button" >I'm Feeling Lucky</button>
         </div>
 

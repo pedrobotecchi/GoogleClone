@@ -1,9 +1,11 @@
+
+
 // Function that will get the string to search
-function setSearch(e) {
-    search = document.getElementById('userSearch').value;
-    if(!e.key || e.key === 'Enter') {
-        if(search !== '') {
-            window.location.href = `http://127.0.0.1:5500/searchResult.html?search=${search}`;
+function searchInputAction(e) {
+    const { target : { value }, key } = e;
+    if(!key || key === 'Enter') {
+        if(value !== '') {
+            window.location.href = `http://127.0.0.1:5500/searchResult.html?search=${value}`;
         }
     }
 }

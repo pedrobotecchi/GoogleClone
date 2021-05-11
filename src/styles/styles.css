@@ -208,8 +208,7 @@
 
 .menu__bar{
     display: flex;
-    -webkit-box-shadow: 1px 1px 1px 1px #ccc;
-    box-shadow: rgba(0,0,0, 1);
+    box-shadow: 1px 1px 1px 1px #ccc;
     margin: 2px;
     border-radius: 20px;
     width: 650px;
@@ -273,6 +272,7 @@
 }
 
 .material-icons{
+    cursor: pointer;
     margin-right: 3px;
 }
 

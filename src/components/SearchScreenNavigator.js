@@ -4,6 +4,13 @@ import GoogleLogo from '../assets/google-2015.svg'
 import Avatar from '../assets/Pedro.svg'
 import MoreOptionsIcon from '../assets/more-icon.svg'
 import XIcon from '../assets/xIcon.svg';
+import Icon from '@material-ui/core/Icon';
+
+const styles = {
+  iconStyle : {
+    color: 'grey',
+  }
+}
 
 class SearchScreenNavigator extends Component {
   constructor(props) {
@@ -66,23 +73,23 @@ class SearchScreenNavigator extends Component {
       </header>
       <nav className="menu__search__link">
         <button className="link__active"  style={{marginLeft: "13%"}}>
-            <span className="material-icons" style={{color: "gray"}}>search</span>
+            <Icon style={styles.iconStyle}>search</Icon>
             All
         </button>
         <button className="link" target="_blank" onClick={this.showAlert}>
-            <span className="material-icons" style={{color: "gray"}}>location_on</span>
+            <Icon style={styles.iconStyle}>room</Icon>
             Maps
         </button>
         <button className="link" target="_blank" onClick={this.showAlert}>
-            <span className="material-icons" style={{color: "gray"}}>feed</span>
+            <span className="material-icons" style={styles.iconStyle}>feed</span>
             News
         </button>
         <button className="link" target="_blank" onClick={this.showAlert} >
-            <span className="material-icons" style={{color: "gray"}}>photo</span>
+            <Icon style={styles.iconStyle}>image</Icon>
             Images
         </button>
         <button className="link" target="_blank" onClick={this.showAlert} >
-            <span className="material-icons" style={{color: "gray"}}>sell</span>
+            <span className="material-icons" style={styles.iconStyle}>sell</span>
             Shopping
         </button>
         <button className="link" style={{ marginLeft: "32px", marginRight: "12px"}} onClick={this.showAlert}>

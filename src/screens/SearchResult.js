@@ -4,6 +4,7 @@ import SearchScreenNavigator from '../components/SearchScreenNavigator';
 import Paginator from '../components/Paginator';
 import RelatedSearch from '../components/RelatedSearch';
 import SearchInfoSection from '../components/SearchInfoSection';
+import SearchScreenFooter from '../components/SearchScreenFooter';
 
 const MAX_RESULTS_PER_PAGE = 10;
 
@@ -65,6 +66,7 @@ class SearchResult extends Component {
             <SearchInfoSection search={ capitalizedSearchString }/>
           </div>
         </main>
+        <SearchScreenFooter/>
       </div>
     )
   }

@@ -1,0 +1,29 @@
+.related__search{
+  display: flex;
+  max-width: 55%;
+  flex-direction: column;
+}
+
+.related__boxline{
+  display: flex;
+  align-content: center;
+}
+
+.related__box{
+  display: flex;
+  align-items: center;
+  background-color: rgba(26,13,171, 0.10);
+  height: 40px;
+  width: 300px;
+  border-radius: 30px;
+  margin: 8px 8px 0px 0px;
+  padding-left: 12px;
+}
+
+.related__text{
+  pointer-events: none;
+  font-size: 14px;
+  margin: 0px 0px 0px 16px;
+  background-color: unset;
+  text-decoration: none;
+}

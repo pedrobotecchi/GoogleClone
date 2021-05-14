@@ -1,0 +1,11 @@
+.result__collumn{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+.result__content{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 12px 13%;
+}

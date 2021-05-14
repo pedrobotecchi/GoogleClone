@@ -1,0 +1,62 @@
+.menu{
+  height: 48px;
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.menu__section__right {
+  align-items: center;
+  display: flex;    
+}
+
+.menu__link {
+  color: rgba(0,0,0, 0.87);
+  margin-right: 12px;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration:none;
+}
+
+.menu__profile{
+  border: 0px;
+  background-color: white;
+}
+
+.menu__modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 70px; /* Location of the box */
+  padding-left: 68%;
+  left: 0%;
+  top: 0%;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: unset;
+  
+}
+
+.modal__box{
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  padding-top: 100px; /* Location of the box */
+  background-color: white;
+  border: 1px solid rgba(0,0,0, 0.15);
+}
+
+.menu__icon{
+  padding: 12px 12px;
+}
+
+.menu__avatar {
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0, 0.2);
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

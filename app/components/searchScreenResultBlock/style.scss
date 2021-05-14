@@ -1,0 +1,33 @@
+.result__site{
+  margin-bottom: 24px;
+}
+
+.result__url{
+  color: black;
+  text-decoration: none;
+}
+
+.result__homeURL{
+  color: blue;
+  font-size: 20px;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+.result__homeURL:hover{
+  text-decoration: underline;
+}
+
+.result__description{
+  margin-top: 6px;
+  max-width: 55%;
+  color: rgba(0,0,0,0.75);
+  line-height: 1.5;
+}
+
+.result__search{
+  color: rgb(141, 141, 141);
+  font-size: 12px;
+  max-width: 100%;
+  padding: 0px 2px 16px 0px;    
+}

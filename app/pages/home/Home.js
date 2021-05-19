@@ -6,10 +6,9 @@ import './style.scss';
 import GoogleLogo from '../../icons/google-2015.svg'
 
 // Components
+import InputContainer from '../../components/inputContainer';
 import HomeScreenNavigator from '../../components/homeScreenNavigator/HomeScreenNavigator';
 import HomeScreenFooter from '../../components/homeScreenFooter/homeScreenFooter';
-
-import Icon from '@material-ui/core/Icon';
 
 class Home extends Component {
   constructor(props) {
@@ -37,15 +36,7 @@ class Home extends Component {
         <HomeScreenNavigator/>
         <main className="content">
           <img className="content__logo" alt="Google logo" src={GoogleLogo}/>
-          <div className="content__input">
-            <button onClick={this.searchInputAction} id="searchButton">
-              <Icon>search</Icon>
-            </button>
-            <input className="content__input__search" type="text" placeholder="Search Google or type a URL" id="userSearch" onKeyUp={this.searchInputAction} />
-            <button>
-              <Icon>mic</Icon>
-            </button>
-          </div>
+          <InputContainer saveSearch={(value) => this.setState({ searchText: value })}></InputContainer>
           <div className="content__button__container">
             <button className="content__button" onClick={this.searchInputAction}>Google Search</button>
             <button className="content__button" onClick={this.searchInputAction}>I'm Feeling Lucky</button>

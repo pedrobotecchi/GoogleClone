@@ -94,7 +94,7 @@ class SearchInfoSection extends Component {
             <span className="search__title">Questions & answers</span>
             <span className="search__link">View all questions (1)</span>
           </div>
-          <div className="search__button">
+          <div className="a mansão hollow m">
             <button>Ask a question</button>
           </div>   
         </section>
@@ -112,8 +112,8 @@ class SearchInfoSection extends Component {
             <div className="search__comment__head">
               <span className="search__title" style={{alignSelf: "flex-end"}}>Comments</span>
               <div className="search__comment_button">
-                <button className="search__button">Comment</button>
-                <button className="search__button">Add a photo</button>
+                <button className="a mansão hollow m">Comment</button>
+                <button className="a mansão hollow m">Add a photo</button>
               </div>
             </div>
             <div className="search__comment__box">

@@ -20,10 +20,10 @@ class SearchScreenResultBlock extends Component {
     return (
       <div className="result__site">
         <div className="result__url">
-          <a className="result__url" rel="noreferrer" target="_blank" href={`www.${searchTextWithNoSpaces}.com.br`}>{`www.${searchTextWithNoSpaces}.com.br`}</a>
+          <a className="result__url" rel="noreferrer" target="_blank" href={element.href}>{element.href}</a>
         </div>
         <div className="result__homeURL">
-          <a className="result__homeURL" rel="noreferrer" target="_blank" href={`www.${searchTextWithNoSpaces}.com.br`}>{`${capitalizedSearchString}: Home`}</a>
+          <a className="result__homeURL" rel="noreferrer" target="_blank" href={element.href}>{element.homeURL}</a>
         </div>
         <div className="result__description">
           {element.description}
@@ -33,13 +33,14 @@ class SearchScreenResultBlock extends Component {
   }
 
   render() {
+    const { resultArray } = this.props;
     return (
       <div>
         <div className="result__search">
           <span>About 63,100 results (0.91 seconds) </span>
         </div>
         {
-          ResultBlock.map((element,index) => this.renderResultSearch(element,index))
+          resultArray ? resultArray.results.map((element,index) => this.renderResultSearch(element,index)) : null
         }
       </div>
     )

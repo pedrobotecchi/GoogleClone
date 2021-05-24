@@ -1,5 +1,5 @@
 
-async function getSearchResults(searchString) {
+export const getSearchResults = async (searchString) => {
   let returnData = null;
   await fetch("http://localhost:9000/search/"+searchString)
     .then(res => res.json())
@@ -7,4 +7,6 @@ async function getSearchResults(searchString) {
   return returnData;
 };
 
-export default getSearchResults;
+export const setSearch = async (search) => {
+  return search;
+}

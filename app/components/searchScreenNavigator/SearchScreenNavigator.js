@@ -47,10 +47,10 @@ class SearchScreenNavigator extends Component {
     alert('You clicked on : ' +  id);
   }
 
-  renderNavButtons = (element) => {
+  renderNavButtons = (element, index) => {
 
     return (
-    <button className={element.className} style={element.style ? styles[element.style] : null} onClick={element.onClick ? () => {this.showAlert(element.text)} : null}>
+    <button key={index} className={element.className} style={element.style ? styles[element.style] : null} onClick={element.onClick ? () => {this.showAlert(element.text)} : null}>
       {
         element.icon ? <Icon style={styles.iconStyle}>{element.icon}</Icon> : 
         <span className="material-icons" style={styles.iconStyle}>{element.span}</span>
@@ -98,7 +98,7 @@ class SearchScreenNavigator extends Component {
       </header>
       <nav className="menu__search__link">
         {
-          SearchResultNavLink.map( element => this.renderNavButtons(element))
+          SearchResultNavLink.map( (element, index) => this.renderNavButtons(element,index))
         }
       </nav>
     </div>

@@ -7,7 +7,12 @@ import SearchScreenResultBlock from '../../components/searchScreenResultBlock/Se
 import Paginator from '../../components/paginator/Paginator';
 import RelatedSearch from '../../components/relatedSearch/RelatedSearch';
 import SearchInfoSection from '../../components/searchInfoSection/SearchInfoSection';
-import getSearchResults from '../../api/search';
+import { getSearchResults } from '../../api/search';
+
+// Redux-Saga
+import { useSelector, useDispatch } from 'react-redux';
+import { loadSearch } from '../../actions'
+import { connect } from 'react-redux'
 
 class SearchResult extends Component {
   constructor(props) {
@@ -20,19 +25,21 @@ class SearchResult extends Component {
 
   componentDidMount(){
     const { params } = this.props.match;
-    getSearchResults(params.search).then(data => this.setState({ searchResult: data }));
+    const dispatch = this.props.dispatch();
+    dispatch(loadSearch(params.search));
   }
 
   render() {
     const { params } = this.props.match;
     const searchedString = params.search;
+    const searchResults = this.props.selector().searchReducer.searchResults.results || [];
     return (
       <div>
         <SearchScreenNavigator search={searchedString} />
         <main>
           <div className="result__collumn">
             <section className="result__content">
-              <SearchScreenResultBlock search={ searchedString } resultArray={ this.state.searchResult }/>
+              <SearchScreenResultBlock search={ searchedString } resultArray={ searchResults }/>
               <RelatedSearch search={ searchedString }/>
               <Paginator/>
             </section>
@@ -44,4 +51,12 @@ class SearchResult extends Component {
   }
 }
 
-export default SearchResult;
+const mapDispatchToProps = dispatch => ({
+  dispatch: () => dispatch
+})
+
+const mapStateToProps = state => ({
+  selector: () => state
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchResult);

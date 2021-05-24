@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import './style.scss';
 
 // Icons
@@ -31,6 +30,7 @@ class Home extends Component {
   }
 
   render() {
+    console.log('store',this.props.store)
     return (
       <div>
         <HomeScreenNavigator/>

@@ -22,7 +22,7 @@ class SearchInfoSection extends Component {
   renderButton = () => {
     return (
       <div className="search__info__button">
-        { SearchButtons.map(element => <button className={element.className} onClick={this.showAlert}>{element.text}</button>) }
+        { SearchButtons.map((element, index) => <button key={'button'+index} className={element.className} onClick={this.showAlert}>{element.text}</button>) }
       </div>
     )
   }
@@ -46,9 +46,9 @@ class SearchInfoSection extends Component {
     )
   }
 
-  renderComments = (element) => {
+  renderComments = (element, index) => {
     return ( 
-      <div className="search__comment__item">
+      <div key={index} className="search__comment__item">
         <img className="menu__avatar" src={element.avatar} alt="Avatar"/>
         <div className="search__comment_text">
           <span>{element.comment}</span>
@@ -117,7 +117,7 @@ class SearchInfoSection extends Component {
               </div>
             </div>
             <div className="search__comment__box">
-              { CommentUsers.map(element => this.renderComments(element)) }
+              { CommentUsers.map((element, index) => this.renderComments(element,index)) }
               <span className="search__link">View all Google reviews</span>
             </div>
         </section>

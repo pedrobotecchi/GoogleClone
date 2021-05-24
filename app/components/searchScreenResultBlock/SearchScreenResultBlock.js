@@ -16,9 +16,8 @@ class SearchScreenResultBlock extends Component {
 
 
   renderResultSearch = (element,index) => {
-    const { capitalizedSearchString, searchTextWithNoSpaces } = this.state;
     return (
-      <div className="result__site">
+      <div key={index} className="result__site">
         <div className="result__url">
           <a className="result__url" rel="noreferrer" target="_blank" href={element.href}>{element.href}</a>
         </div>
@@ -40,7 +39,7 @@ class SearchScreenResultBlock extends Component {
           <span>About 63,100 results (0.91 seconds) </span>
         </div>
         {
-          resultArray ? resultArray.results.map((element,index) => this.renderResultSearch(element,index)) : null
+          resultArray.length > 0 ? resultArray.map((element,index) => this.renderResultSearch(element,index)) : null
         }
       </div>
     )

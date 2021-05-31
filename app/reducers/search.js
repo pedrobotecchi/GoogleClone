@@ -1,4 +1,4 @@
-import { LOAD_SEARCH, SAVE_SEARCH } from "../actions"
+import { LOAD_SEARCH, SAVE_SEARCHRESULTS, SAVE_SEARCH } from "../actions"
 
 const initialState = {
   search: '',
@@ -10,7 +10,10 @@ export const searchReducer = (state = initialState, action) => {
     case LOAD_SEARCH: {
       return {...state, search: action.payload}
     }
-    case SAVE_SEARCH: {
+    case SAVE_SEARCH : {
+      return {...state, search: action.payload}
+    }
+    case SAVE_SEARCHRESULTS: {
       return {...state, searchResults: action.payload}
     }
     default:

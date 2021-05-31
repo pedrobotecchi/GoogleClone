@@ -32,14 +32,14 @@ class SearchResult extends Component {
   render() {
     const { params } = this.props.match;
     const searchedString = params.search;
-    const searchResults = this.props.selector().searchReducer.searchResults.results || [];
+    const searchResults = this.props.selector().searchReducer.searchResults[0] || [];
     return (
       <div>
         <SearchScreenNavigator search={searchedString} />
         <main>
           <div className="result__collumn">
             <section className="result__content">
-              <SearchScreenResultBlock search={ searchedString } resultArray={ searchResults }/>
+              <SearchScreenResultBlock search={ searchedString } resultArray={ searchResults.searchinfo }/>
               <RelatedSearch search={ searchedString }/>
               <Paginator/>
             </section>

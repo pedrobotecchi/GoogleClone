@@ -30,7 +30,6 @@ class Home extends Component {
   }
 
   render() {
-    console.log('store',this.props.store)
     return (
       <div>
         <HomeScreenNavigator/>

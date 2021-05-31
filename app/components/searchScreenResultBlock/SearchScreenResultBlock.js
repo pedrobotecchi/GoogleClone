@@ -39,7 +39,7 @@ class SearchScreenResultBlock extends Component {
           <span>About 63,100 results (0.91 seconds) </span>
         </div>
         {
-          resultArray.length > 0 ? resultArray.map((element,index) => this.renderResultSearch(element,index)) : null
+          resultArray && resultArray.length > 0 ? resultArray.map((element,index) => this.renderResultSearch(element,index)) : null
         }
       </div>
     )

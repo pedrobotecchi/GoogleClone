@@ -39,7 +39,11 @@ class SearchScreenResultBlock extends Component {
           <span>About 63,100 results (0.91 seconds) </span>
         </div>
         {
-          resultArray && resultArray.length > 0 ? resultArray.map((element,index) => this.renderResultSearch(element,index)) : null
+          // PostGreSQL
+          //resultArray && resultArray.length > 0 ? resultArray.map((element,index) => this.renderResultSearch(element,index)) : null
+        
+          // Mongodb
+          resultArray && resultArray.length > 0 ? resultArray[0].searchInfo.map((element,index) => this.renderResultSearch(element,index)) : null
         }
       </div>
     )

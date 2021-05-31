@@ -32,14 +32,18 @@ class SearchResult extends Component {
   render() {
     const { params } = this.props.match;
     const searchedString = params.search;
-    const searchResults = this.props.selector().searchReducer.searchResults[0] || [];
+    // PostGreSQL
+    //const searchResults = this.props.selector().searchReducer.searchResults[0] || [];
+
+    //MongoDb
+    const searchResults = this.props.selector().searchReducer.searchResults.searchResults || [];
     return (
       <div>
         <SearchScreenNavigator search={searchedString} />
         <main>
           <div className="result__collumn">
             <section className="result__content">
-              <SearchScreenResultBlock search={ searchedString } resultArray={ searchResults.searchinfo }/>
+              <SearchScreenResultBlock search={ searchedString } resultArray={ searchResults }/>
               <RelatedSearch search={ searchedString }/>
               <Paginator/>
             </section>

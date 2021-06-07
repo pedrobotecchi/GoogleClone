@@ -9,7 +9,16 @@ import Avatar from '../../icons/Pedro.svg'
 import { HomeNavLink } from '../../constants/linkReferences';
 
 class HomeScreenNavigator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      renderLoginModal: false,
+      hasLogin: false,
+    }
+  }
+
   render () {
+    const { hasLogin, renderLoginModal } = this.state;
     return(
       <header className="menu">
         <nav>
@@ -20,9 +29,19 @@ class HomeScreenNavigator extends Component {
               }) 
             }
             <img className="menu__icon" src={MoreIcon} alt="More Options" />
-            <button className="menu__profile">
-              <img className="menu__avatar" alt="Avatar Icon" src={Avatar}/>
-            </button>    
+            <button className={hasLogin ? "menu__profile" : "menu__profile__notLogged"} onClick={() => { this.setState({ renderLoginModal: !renderLoginModal }) }}>
+            <span className="button__text" onClick={() =>  window.location.href = `/login`} >Fazer Login</span>
+            { hasLogin ? (
+              <div>
+                <img className="menu__avatar" src={Avatar} alt="Avatar Icon" />
+                <div id="menu__modal" style={{ display: renderLoginModal ? 'flex' : 'none'}} className="menu__modal">
+                  <div id="modal__box" className="modal__box">
+                    <span>Insert SOMETHING HERE!!</span>
+                  </div>
+                </div>
+              </div>)
+             : null } 
+          </button>      
           </section>
         </nav>
       </header>

@@ -37,6 +37,7 @@
     "html-webpack-plugin": "^5.3.1",
     "sass": "^1.32.12",
     "sass-loader": "^11.1.0",
+    "storybook": "^6.2.9",
     "style-loader": "^2.0.0",
     "svg-url-loader": "^7.1.1",
     "url-loader": "^4.1.1",

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './style.scss';
 
-// Constants
-import { ResultBlock } from '../../constants/resultReferences';
-
 class SearchScreenResultBlock extends Component {
   constructor(props) {
     super(props);

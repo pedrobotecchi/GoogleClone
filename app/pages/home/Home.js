@@ -38,7 +38,7 @@ class Home extends Component {
           <InputContainer saveSearch={(value) => this.setState({ searchText: value })}></InputContainer>
           <div className="content__button__container">
             <button className="content__button" onClick={this.searchInputAction}>Google Search</button>
-            <button className="content__button" onClick={this.searchInputAction}>I'm Feeling Lucky</button>
+            <button className="content__button" onClick={this.searchInputAction}>{"I'm Feeling Lucky"}</button>
           </div>    
         </main>
         <HomeScreenFooter/>

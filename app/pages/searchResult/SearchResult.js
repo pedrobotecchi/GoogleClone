@@ -7,10 +7,8 @@ import SearchScreenResultBlock from '../../components/searchScreenResultBlock/Se
 import Paginator from '../../components/paginator/Paginator';
 import RelatedSearch from '../../components/relatedSearch/RelatedSearch';
 import SearchInfoSection from '../../components/searchInfoSection/SearchInfoSection';
-import { getSearchResults } from '../../api/search';
 
 // Redux-Saga
-import { useSelector, useDispatch } from 'react-redux';
 import { loadSearch } from '../../actions'
 import { connect } from 'react-redux'
 

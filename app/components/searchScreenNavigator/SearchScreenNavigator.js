@@ -29,6 +29,8 @@ class SearchScreenNavigator extends Component {
     super(props);
     this.state = {
       searchText : props.search || '',
+      renderLoginModal: false,
+      hasLogin: false,
     }
   }
 
@@ -62,7 +64,7 @@ class SearchScreenNavigator extends Component {
 
   render () {
     const { search } = this.props; 
-    
+    const { renderLoginModal, hasLogin } = this.state;
     return(
       <div>
       <header className="menu__search">
@@ -85,14 +87,19 @@ class SearchScreenNavigator extends Component {
           </div>
         </section>
         <section className="menu__section__right">
-          <img className="menu__icon" src={MoreOptionsIcon} alt="More options" />
-          <button className="menu__profile" >
-            <img className="menu__avatar" src={Avatar} alt="Avatar Icon" />
-            <div id="menu__modal" style={{paddingTop: "80px"}} className="menu__modal">
-              <div id="modal__box" className="modal__box">
-                <span>Insert SOMETHING HERE!!</span>
-              </div>
-            </div>
+          <img className="menu__icon" src={MoreOptionsIcon} alt="More options" />        
+          <button className={hasLogin ? "menu__profile" : "menu__profile__notLogged"} onClick={() => { this.setState({ renderLoginModal: !renderLoginModal }) }}>
+            <span className="button__text" onClick={() =>  window.location.href = `/login`} >Fazer Login</span>
+            { hasLogin ? (
+              <div>
+                <img className="menu__avatar" src={Avatar} alt="Avatar Icon" />
+                <div id="menu__modal" style={{ display: renderLoginModal ? 'flex' : 'none'}} className="menu__modal">
+                  <div id="modal__box" className="modal__box">
+                    <span>Insert SOMETHING HERE!!</span>
+                  </div>
+                </div>
+              </div>)
+             : null } 
           </button>  
         </section>
       </header>

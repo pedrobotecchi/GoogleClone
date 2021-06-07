@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { 
   BrowserRouter,
  } from 'react-router-dom';
-import Routes from './Routes'
+import Routes from './Routes';
 import './style.scss';
 
 // React redux

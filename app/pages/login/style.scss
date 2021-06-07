@@ -1,0 +1,15 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 56px 8px 0px;
+}
+
+.content__login{
+  width: 400px;
+  border: 1.5px solid rgba($color: gray, $alpha: 0.3);
+  border-radius: 5px;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+}

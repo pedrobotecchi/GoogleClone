@@ -5,9 +5,12 @@ import './style.scss';
 import GoogleLogo from '../../icons/google-2015.svg'
 
 
-class LoginEmail extends Component {
+// Function that will get the string to search
 
-
+/**
+ * Primary UI component for user interaction
+ */
+ class Teste extends Component {
   // Function that will get the string to search
   inputEmailAction = (e) => {
     const { target : { value }, key } = e;
@@ -31,13 +34,11 @@ class LoginEmail extends Component {
         </span>
         <div className="login__button">
           <button className="button__link" style={{ margin: '0px' }}>Criar conta</button>
-          <button className="button__link__next" style={{ margin:'0px' }} onClick={this.inputEmailAction} >Próxima</button>
+          <button className="button__link__next" style={{ margin:'0px' }} >Próxima</button>
         </div>
       </div>   
     )
   }
 }
 
-export default LoginEmail;
-
- 
+export default Teste;

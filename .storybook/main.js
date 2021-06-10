@@ -7,14 +7,21 @@ module.exports = {
     // 'PRODUCTION' is used when building the static version of storybook.
 
     // Make whatever fine-grained changes you need
-    config.module.rules.push( {
+    config.module.rules.push( 
+    {
       test: /\.scss$/,
       use: ["style-loader", "css-loader", "sass-loader"]
     },
     {
-      test: /\.js$/,
+      test: /.(js|jsx)$/,
       exclude: /node_modules/,
-      use: ["babel-loader"]
+      use: [{
+          loader: 'babel-loader',
+          options: {
+              cacheDirectory: true,
+              plugins: ['@babel/plugin-transform-runtime']
+          }
+      }]
     },
     {
       test: /\.(jpg|png)$/,
@@ -32,6 +39,7 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+    "@storybook/addon-knobs"
   ]
 }

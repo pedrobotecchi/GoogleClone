@@ -23,7 +23,7 @@ class LoginEmail extends Component {
         <img className="content__login__logo" alt="Google logo" src={GoogleLogo}/>
         <span className="content__title">Fazer Login</span>
         <span className="content__subtitle" >Use sua Conta do Google</span>
-        <input className="content__email__input" placeholder="E-mail" onKeyPressCapture={this.inputEmailAction}></input>
+        <input className="content__email__input" placeholder={this.props.email || 'Email'} onKeyPressCapture={this.inputEmailAction}></input>
         <button className="button__link">Esqueceu seu e-mail?</button>
         <span className="login__text">
           Não está no seu computador? Use o modo visitante para fazer login com privacidade.

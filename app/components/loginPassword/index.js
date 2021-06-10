@@ -5,9 +5,13 @@ import './style.scss';
 import GoogleLogo from '../../icons/google-2015.svg'
 
 import Icon from '@material-ui/core/Icon';
-
 class LoginPassword extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      showPassword: this.props.showPassword || false
+    }
+  }
 
   // Function that will get the string to search
   inputPasswordAction = (e) => {
@@ -33,9 +37,9 @@ class LoginPassword extends Component {
             <span style={{ fontSize:'16px', verticalAlign:'super' }}>{email}</span>
           </div>
         </button>
-        <input className="content__password__input" type="password" placeholder="Digite sua senha" onKeyPressCapture={this.inputPasswordAction}></input>
+        <input className="content__password__input" type={this.props.showPassword ? "text" : "password"} placeholder="Digite sua senha" onKeyPressCapture={this.inputPasswordAction}></input>
         <div className="content__checkbox">
-          <input type="checkbox" value="Mostrar senha"/>
+          <input type="checkbox" value="Mostrar senha" checked={this.props.showPassword}/>
           <span style={{ marginLeft:'6px' }}>Mostrar senha</span>
         </div>
         <div className="login__button">

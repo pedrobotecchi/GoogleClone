@@ -1,7 +1,8 @@
-import { LOAD_USER, SAVE_USER } from "../actions"
+import { LOAD_USER, SAVE_USER, CHECK_USER } from "../actions"
 
 const initialState = {
   user: {},
+  userIsInBD : false,
 }
 
 export const loginReducer = (state = initialState, action) => {
@@ -12,9 +13,13 @@ export const loginReducer = (state = initialState, action) => {
     case SAVE_USER : {
       return state;
     }
+    case CHECK_USER : {
+      return {userIsInBD: action.payload}
+    }
     default:
       return state;
   }
 }
 
-export const getUser = state => state.user;
+export const getUser = (state = initialState) => state.user;
+export const checkUser = (state = initialState) => state.userIsInBD;

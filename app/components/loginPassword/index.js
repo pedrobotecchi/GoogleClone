@@ -17,29 +17,27 @@ class LoginPassword extends Component {
   inputPasswordAction = (e) => {
     const { target : { value }, key } = e;
     if(!key || key === 'Enter') {
-      const { setEmail } = this.props;
-      setEmail ? setEmail(value) : null;
-    }
-    else{
-      this.setState({ searchText: value });
+      const { setPassword } = this.props;
+      setPassword ? setPassword(value) : null;
     }
   }
 
   render () {
     const { email } = this.props;
+    const { showPassword } = this.state;
     return(
       <div className="content__login">
         <img className="content__login__logo" alt="Google logo" src={GoogleLogo}/>
         <span className="content__title">Olá!</span>
-        <button className="content__email">
+        <button className="content__email" onClick={() => this.props.goBackToEmail()}>
           <div>
             <Icon style={{ marginRight:'6px' }}>account_circle</Icon>
             <span style={{ fontSize:'16px', verticalAlign:'super' }}>{email}</span>
           </div>
         </button>
-        <input className="content__password__input" type={this.props.showPassword ? "text" : "password"} placeholder="Digite sua senha" onKeyPressCapture={this.inputPasswordAction}></input>
+        <input className="content__password__input" type={this.state.showPassword ? "text" : "password"} placeholder="Digite sua senha" onKeyPressCapture={this.inputPasswordAction}></input>
         <div className="content__checkbox">
-          <input type="checkbox" value="Mostrar senha" checked={this.props.showPassword}/>
+          <input type="checkbox" value="Mostrar senha" defaultChecked={this.state.showPassword} onClick={()=> this.setState({ showPassword: !showPassword})}/>
           <span style={{ marginLeft:'6px' }}>Mostrar senha</span>
         </div>
         <div className="login__button">
